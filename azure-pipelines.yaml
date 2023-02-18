@@ -1,0 +1,20 @@
+---
+pool: gopi
+  
+trigger: 
+    - master 
+    
+resources:
+  repositories: 
+    - repository: azuredevopsparamteres 
+      endpoint: github_id
+      ref: refs/heads/main
+      name: Nagaraju11111/learninggit
+      type: github    
+  
+stages:
+  - template: azuredevops/maventemplate.yaml@azuredevopsparamteres 
+    parameters:
+      goal: 'package' 
+      jdkVersionOption: '1.8' 
+      jdkDirectory: /usr/lib/jvm/java-8-openjdk-amd64/
