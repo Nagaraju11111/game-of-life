@@ -16,5 +16,5 @@ stages:
   - template: azuredevops/maventemplate.yaml@azuredevopsparamteres 
     parameters:
       goal: 'package' 
-      jdkVersionOption: '1.8' 
-      jdkDirectory: /usr/lib/jvm/java-8-openjdk-amd64/
+      javaversion: '1.8' 
+      javadirectory: /usr/lib/jvm/java-8-openjdk-amd64/
